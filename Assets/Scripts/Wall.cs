@@ -10,7 +10,7 @@ public class Wall : MonoBehaviour
     public void SetColor()
     {
         var meshNow = GetComponent<MeshRenderer>();
-        meshNow.material.color = defaultColor;
+        meshNow.sharedMaterial.color = defaultColor;
 
     }
     

@@ -22,13 +22,11 @@ public class ColorTool : EditorWindow
 
    private void OnGUI()
    {
-       if (GUILayout.Button("ChangeColor"))
+       if (!GUILayout.Button("ChangeColor")) return;
+       var allMesh = FindObjectsOfType<MeshRenderer>();
+       foreach (var mesh in allMesh)
        {
-           MeshRenderer[] allMesh = FindObjectsOfType<MeshRenderer>();
-           foreach (var mesh in allMesh)
-           {
-               mesh.material.color = Color.yellow;
-           }
+           mesh.sharedMaterial.color = Color.yellow;
        }
    }
 }
