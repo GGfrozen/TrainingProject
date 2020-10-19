@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9b8e7d4e-997d-41a2-8295-b9c8d1d94018" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TrainingProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TrainingProject/.idea/contentModel.xml" afterDir="false" />
@@ -19,6 +37,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MouseLook.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/WallEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/ColorTool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Wall.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -26,6 +47,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MouseLook.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MirrortTexture.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/MyWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/ProjectTile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/Projecttile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Projecttile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/ProjecttileEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/ColorTool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/WallEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Wall.cs" />
       </list>
     </option>
   </component>
@@ -71,6 +100,7 @@
       <updated>1602657726636</updated>
       <workItem from="1602657739796" duration="5020000" />
       <workItem from="1602687530474" duration="527000" />
+      <workItem from="1603090036023" duration="7749000" />
     </task>
     <servers />
   </component>
@@ -79,13 +109,25 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="385" y="175" width="670" height="677" key="search.everywhere.popup" timestamp="1602680918408">
-      <screen x="0" y="23" width="1440" height="829" />
+    <state x="385" y="165" width="670" height="735" key="search.everywhere.popup" timestamp="1603104497687">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="385" y="165" width="670" height="735" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1603104497687" />
     <state x="385" y="175" width="670" height="676" key="search.everywhere.popup/0.23.1440.828@0.23.1440.828" timestamp="1602674393160" />
     <state x="385" y="175" width="670" height="677" key="search.everywhere.popup/0.23.1440.829@0.23.1440.829" timestamp="1602680918408" />
   </component>
