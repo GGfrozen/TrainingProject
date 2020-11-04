@@ -14,10 +14,18 @@ public class Player : MonoBehaviour
     
     private bool _isAim;
 
+    public static float newSpeed;
+
+    public static float NewSpeed
+    {
+        get => newSpeed;
+        set => newSpeed = value;
+    }
+    
     private void Start()
     {
-   
         _isAim = false;
+        newSpeed = moveSpeed;
     }
 
     private void Update()
@@ -28,7 +36,6 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
-
     }
 
     private void Move()
@@ -49,7 +56,7 @@ public class Player : MonoBehaviour
         var inputHorizontal = Input.GetAxis(s1Horizontal);
         var inputVertical = Input.GetAxis(s2Vertical);
         var movement = new Vector3(inputHorizontal, 0.0f, inputVertical);
-        transform.Translate(movement * (moveSpeed * Time.deltaTime));
+        transform.Translate(movement * (NewSpeed * Time.deltaTime));
     }
 
     private void UseAim()
