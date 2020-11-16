@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
+using System.Security;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -38,19 +39,45 @@ public class FileManager : MonoBehaviour
             }
             else
             {
-                if (!Directory.Exists(outArchive))
-                {
+                if (!Directory.Exists(outArchive)) 
                     Directory.CreateDirectory(outArchive);
-                } 
-                if (Directory.GetFiles(outArchive).Length == 0)
+                try
                 {
-                    ZipFile.ExtractToDirectory(outPath,outArchive);
+                    ZipFile.ExtractToDirectory(outPath, outArchive);
+                }
+                catch (IOException e)
+                {
+                    Debug.Log(e.Message);
+                }
+                finally
+                {
+                    Debug.Log("Complete!");
                 }
 
                 var temp = Directory.GetFiles(outArchive)[0].Split('/');
                 var fileName = temp[temp.Length - 1];
-
-                var dataJson = File.ReadAllText(Path.Combine(outArchive, fileName));
+                
+                var dataJson = "";
+                try
+                {
+                    dataJson = File.ReadAllText(Path.Combine(outArchive, fileName));
+                }
+                catch(DirectoryNotFoundException e)
+                {
+                    Debug.Log("Directory not found! " + e.Message);
+                }
+                catch (SecurityException e)
+                {
+                    Debug.Log("No permission " + e.Message);
+                }        
+                catch (IOException e)
+                {
+                    Debug.Log("Error opening file " + e.Message);
+                }
+                finally
+                {
+                    Debug.Log("Completed!");
+                }
                 var data = JsonUtility.FromJson<Data>(dataJson);
                 
                 var base64Texture = Convert.FromBase64String(data.base64Texture);
